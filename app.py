@@ -1,5 +1,5 @@
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -20,3 +20,7 @@ def get_data():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/')
+def todo_page():
+    return render_template('todo.html')

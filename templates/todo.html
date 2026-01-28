@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Create a To-Do Item</h2>
+    <form action="/submit_todoitem" method="POST">
+        <label for="name">Item Name:</label><br>
+        <input type="text" id="name" name="item_name" required><br><br>
+        <label for="desc">Item Description:</label><br>
+        <textarea id="desc" name="item_description" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
