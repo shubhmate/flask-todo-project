@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Create a To-Do Item</h2>
+    <form action="/submit_todoitem" method="POST">
+        <!-- New Item ID field -->
+        <label for="item_id">Item ID:</label><br>
+        <input type="text" id="item_id" name="item_id" placeholder="Optional for new items"><br><br>
+        <!-- New Item UUID field -->
+        <label for="item_uuid">Item UUID:</label><br>
+        <input type="text" id="item_uuid" name="item_uuid" readonly>
+        <button type="button" onclick="generateUUID()">Generate ID</button><br><br>
+        <!-- New Item Hash field -->
+        <label for="item_hash">Item Hash:</label><br>
+        <input type="text" id="item_hash" name="item_hash" readonly style="background-color: #f0f0f0; width: 300px;"><br><br>
+        <label for="name">Item Name:</label><br>
+        <input type="text" id="name" name="item_name" required><br><br>
+        <label for="desc">Item Description:</label><br>
+        <textarea id="desc" name="item_description" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
